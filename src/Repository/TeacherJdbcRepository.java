@@ -20,7 +20,7 @@ public class TeacherJdbcRepository implements ICrudRepository<Teacher>{
         if (id == null)
             throw new NullException("Id must not be null");
 
-        Teacher teacher;
+        Teacher teacher = null;
 
         String teacherQuery = "select t.id, t.firstName, t.lastName from teacher t " +
                 "where t.id = " + id;

@@ -19,7 +19,7 @@ public class StudentJdbcRepository implements ICrudRepository<Student>{
     public Student findOne(Integer id) throws NullException, SQLException, InputException {
         if (id == null) throw new NullException("Id must not be null");
 
-        Student student;
+        Student student = null;
 
         String studentQuery = "select s.id, s.firstName, s.lastName, s.totalCredits from student s " +
                 "where s.id = " + id;

@@ -20,7 +20,7 @@ public class CourseJdbcRepository implements ICrudRepository<Course> {
         if (id == null)
             throw new NullException("Id must not be null");
 
-        Course course;
+        Course course = null;
 
         String courseQuery = "select c.id, c.name, c.teacherId, c.maxEnrollment, c.credits from course c " +
                 "where c.id = " + id;

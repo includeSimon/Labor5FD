@@ -17,6 +17,6 @@ public class Main {
     public static void main(String[] args) throws SQLException, ClassNotFoundException, InputException, NullException, IOException {
         CourseStudentJdbc relationshipRepo = new CourseStudentJdbc();
 
-        System.out.println(relationshipRepo.save(3,2));
+
     }
 }
